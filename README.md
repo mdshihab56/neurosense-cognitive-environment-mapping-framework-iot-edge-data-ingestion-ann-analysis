@@ -67,11 +67,11 @@ Ns-cemf/
 
 ├── app.py
 ├── data.csv
-
+|
 ├── models/
 │   ├── ann_model.pkl
 │   └── regression_model.pkl
-
+|
 ├── static/
 │   ├── css/
 │   │   └── style.css
@@ -80,7 +80,7 @@ Ns-cemf/
 │       ├── trend_waveform.png
 │       ├── sub_chart_1.png
 │       └── ...
-
+|
 └── templates/
     ├── index.html
     └── score.html
