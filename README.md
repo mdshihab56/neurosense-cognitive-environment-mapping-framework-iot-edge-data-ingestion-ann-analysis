@@ -106,7 +106,14 @@ Ns-cemf/
 ```
 
 ---
+### Data Ingestion Interface for uploading
+<img width="1920" height="822" alt="Screenshot (4800)" src="https://github.com/user-attachments/assets/9de7152c-57cb-44d6-a3a6-a3f5c3a36968" />
 
+
+### Showing Rows of Data of Data Ingestion by uploading Txt file from ESP
+<img width="1920" height="341" alt="Screenshot (48201)" src="https://github.com/user-attachments/assets/58d99eaf-bac7-4741-920f-f696f0205e6e" />
+
+---
 ## 6. Data Scaling and Normalization
 
 All sensor inputs are normalized using Min-Max Scaling.
@@ -161,7 +168,9 @@ Lmax = 1000 Lux
 ```
 
 ---
+### Real-Time Device Telemetry Multi-Stream Data Curve
 
+---
 ## 7. Matrix Multiplication in the Classifier Model
 
 The backend contains a trained Artificial Neural Network stored inside
