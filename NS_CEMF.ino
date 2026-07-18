@@ -8,16 +8,16 @@
 #include <math.h>
 #include "index.h"
 
-const char* ssid     = "TP Link C64";
-const char* password = "Netgear@shihab1209";
+const char* ssid     = "SSID";
+const char* password = "Password";
 
-// Static Host Routing Configuration
+// Static Host Routing
 IPAddress local_IP(192, 168, 0, 150); 
 IPAddress gateway(192, 168, 0, 1);
 IPAddress subnet(255, 255, 255, 0);
 IPAddress primaryDNS(8, 8, 8, 8);   
 
-// HW Interfaces Configuration Mapping
+// Sensor Pin Connections
 #define DHTPIN       4
 #define DHTTYPE      DHT22
 #define MQ135_PIN    34
