@@ -15,14 +15,29 @@ The structural foundation utilizes precision-machined, high-optical-clarity **3 
 
 ## 2. Layer-by-Layer Architecture
 
-#### Structural Framework Parameters & Node Allocation Design
+### Structural Framework Parameters & Node Allocation Design
 <img width="4000" height="2250" alt="NeuroSense Analytics Platform STRUCTURE_1ai" src="https://github.com/user-attachments/assets/c3214a0a-1f43-4f30-82ec-64e7dcad310e" />
 
-#### Multi-Tiered Substrate Breakdown & Node Allocation Design
+
+### Multi-Tiered Substrate Breakdown & Node Allocation Design
 <img width="4000" height="2250" alt="NeuroSense Analytics Platform STRUCTURE_2ai" src="https://github.com/user-attachments/assets/a1094655-5d5e-4b39-9575-7c8fb648e9f2" />
 
-#### Power, Microcontroller & Sensor Array Connection Diagram
+
+### Power, Microcontroller & Sensor Array Connection Diagram
 <img width="4000" height="2250" alt="NeuroSense Analytics Platform STRUCTURE_Wiring_3ai" src="https://github.com/user-attachments/assets/96d6affa-5018-415b-8a09-85b896b76f6e" />
+
+
+---
+### Arduino IDE Serial Monitor Data Log
+<img width="1920" height="335" alt="Screenshot (4808)" src="https://github.com/user-attachments/assets/27cae821-f14d-4c30-864e-93b99fa900cc" />
+
+
+### Arduino IDE Serial Interpolate
+<img width="1920" height="1080" alt="Screenshot (4809)" src="https://github.com/user-attachments/assets/56970804-862c-453b-a976-bf3765346a48" />
+
+
+### NeuroSense Analytics Platform
+<img width="1920" height="1080" alt="Screenshot (4799)" src="https://github.com/user-attachments/assets/7db5ef6c-d0c0-4736-bbbc-084223f1f58b" />
 
 
 ---
@@ -224,6 +239,7 @@ The sigmoid compresses the ANN prediction into a normalized value between **0** 
 ---
 
 ## 10. Regression Analysis and Time-Series Environmental Decay Math
+<img width="2379" height="805" alt="trend_waveforhm" src="https://github.com/user-attachments/assets/fea1c8d9-988e-463b-80a7-0506251651f8" />
 
 The framework incorporates a regression forecasting engine (`regression_model.pkl`) that predicts how current environmental conditions may influence human health over the next **24 hours**.
 
