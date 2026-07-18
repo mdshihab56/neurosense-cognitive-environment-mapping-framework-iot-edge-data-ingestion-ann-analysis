@@ -1,4 +1,4 @@
-# NeuroSense Cognitive Environment Mapping Framework
+<img width="4000" height="2250" alt="NeuroSense Analytics Platform STRUCTURE_1ai" src="https://github.com/user-attachments/assets/7fee7088-9803-4886-846d-dcc812c51b3c" /><img width="4000" height="2250" alt="NeuroSense Analytics Platform STRUCTURE_2ai" src="https://github.com/user-attachments/assets/08fdebb5-4a2b-482c-8e9d-03ba4f67bac7" /># NeuroSense Cognitive Environment Mapping Framework
 ## IoT Edge Computing Data Ingestion Platform & Artificial Neural Network Environment State Analysis
 
 This project is an integrated, edge-to-cloud **NeuroSense Cognitive Environment Mapping Framework** designed to track ambient atmospheric conditions and analyze their direct impact on human health and cognitive performance. The system features an array of precision hardware sensors managed by an ESP32 microcontroller, all housed within a modular, multi-tier custom enclosure constructed from transparent acrylic sheets, washers, and metallic hex standoffs. Telemetry data is smoothed locally using filtering algorithms, transmitted via a resilient Wi-Fi pipeline, and processed by a specialized Flask backend server running predictive Machine Learning models (ANN Classifier and Future Regression Forecasts) to generate real-time environmental quality indices and responsive boundary tracking dashboards.
@@ -16,10 +16,14 @@ The structural foundation utilizes precision-machined, high-optical-clarity **3 
 ## 2. Layer-by-Layer Architecture
 
 #### Structural Framework Parameters & Node Allocation Design
+<img width="4000" height="2250" alt="NeuroSense Analytics Platform STRUCTURE_1ai" src="https://github.com/user-attachments/assets/c3214a0a-1f43-4f30-82ec-64e7dcad310e" />
 
 #### Multi-Tiered Substrate Breakdown & Node Allocation Design
+<img width="4000" height="2250" alt="NeuroSense Analytics Platform STRUCTURE_2ai" src="https://github.com/user-attachments/assets/a1094655-5d5e-4b39-9575-7c8fb648e9f2" />
 
 #### Power, Microcontroller & Sensor Array Connection Diagram
+<img width="4000" height="2250" alt="NeuroSense Analytics Platform STRUCTURE_Wiring_3ai" src="https://github.com/user-attachments/assets/96d6affa-5018-415b-8a09-85b896b76f6e" />
+
 
 ---
 
