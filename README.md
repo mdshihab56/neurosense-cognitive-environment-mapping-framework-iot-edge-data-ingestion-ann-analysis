@@ -1,0 +1,2 @@
+# neurosense-cognitive-environment-mapping-framework-iot-edge-data-ingestion-ann-analysis
+An end-to-end Smart Environmental Cognitive Assessment System tracking ambient atmospheric metrics via an ESP32 edge node housed in a custom acrylic chassis. Features a Flask backend engine utilizing an ANN Classifier and multi-variable Regression models to map real-time learning suitability, productivity indices, and biological stress.
