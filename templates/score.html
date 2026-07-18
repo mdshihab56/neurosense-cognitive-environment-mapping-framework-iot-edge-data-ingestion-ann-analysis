@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ index.name }} | Detailed Breakdown</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>{{ index.name }} Dynamic Deep-Dive</h1>
+            <div class="subtitle">Cognitive Processing Matrix Evaluation Subpage</div>
+        </div>
+        <a href="/results" class="btn">Return to Primary Core</a>
+    </header>
+
+    <div class="calculated-grid">
+        <div class="metric-panel" style="align-items: center; justify-content: center; text-align: center; padding: 50px 20px;">
+            <h3>Calculated Target Value</h3>
+            <div style="font-size: 5rem; font-weight: 700; color: var(--dynamic-color, #ffffff); --dynamic-color: {{ index.color }}; margin: 20px 0;">{{ index.score }}%</div>
+            <span class="status-badge" style="background-color: var(--dynamic-color, #ffffff); --dynamic-color: {{ index.color }}; color:#000000;">
+                {% if index.score > 75 %} OPTIMAL INTERACTION {% elif index.score > 45 %} MODERATE ADAPTATION {% else %} CRITICAL STRESS CONDITION {% endif %}
+            </span>
+        </div>
+
+        <div class="metric-panel">
+            <h3>Cognitive Environment Impact Analysis</h3>
+            <p style="color:var(--text-sub); line-height:1.6; font-size:0.95rem; margin-top:15px;">
+                This metric represents the integrated behavioral impact assessment of your setup. The value of <strong>{{ index.score }}%</strong> is calculated by evaluating multiple environmental lines against typical baselines in Bangladesh.
+            </p>
+            <h4 style="margin-top:20px; color:var(--text-main);">Identified Vulnerability Profiles:</h4>
+            <p style="color:var(--text-sub); line-height:1.5; font-size:0.9rem;">
+                {{ vulnerability_text }}
+            </p>
+        </div>
+    </div>
+
+    <!-- Dynamic Boundary Chart Visualizer Container -->
+    <div style="background-color: #1c1c1e; padding: 25px; border-radius: 12px; margin-top: 20px; text-align: center; border: 1px solid #2c2c2e;">
+        <h3 style="margin: 0 0 20px 0; text-align: left; font-size: 1.1rem; color: #ffffff;">Dynamic Boundary Waveform Real-Time Matrix</h3>
+        <div style="width: 100%;">
+            <img src="{{ url_for('static', filename='charts/' ~ chart_file) }}" alt="Metric Boundary Deviation Chart" style="max-width:100%; height:auto; border-radius:8px; border:1px solid #2c2c2e; display: block; margin: 0 auto;">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NeuroSense Cloud Analytics Core</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>NeuroSense Cognitive Environment Mapping Framework</h1>
+        <div class="subtitle">
+          IoT Edge Computing Data Ingestion Platform & Artificial Neural Network
+          Environment State Analysis
+        </div>
+      </div>
+      <div class="database-pill">
+        Central Repository Status:
+        <strong id="row-count-badge">{{ row_count }}</strong> Rows Loaded
+      </div>
+    </header>
+
+    <main class="panel-box">
+      <h3>Primary Node Dataset Telemetry Ingestion Pipeline</h3>
+      <p class="subtitle">
+        Upload the `.txt` dataset downloaded from your ESP32 device node network
+        to run ANN state analysis.
+      </p>
+
+      <div class="upload-zone" id="drop-zone">
+        <input
+          type="file"
+          id="file-input"
+          accept=".txt"
+          style="display: none"
+        />
+        <button
+          class="btn btn-primary"
+          onclick="document.getElementById('file-input').click()"
+        >
+          Choose Target Dataset File
+        </button>
+        <p
+          id="file-name-display"
+          style="margin-top: 10px; color: #86868b; font-size: 0.85rem"
+        >
+          No target object mounted
+        </p>
+      </div>
+
+      <div
+        id="upload-status-card"
+        class="status-alert-box"
+        style="display: none"
+      >
+        <h4>Ingestion Pipeline Status Report:</h4>
+        <ul>
+          <li>
+            Packets Parsed in Upload File: <strong id="parsed-rows">0</strong>
+          </li>
+          <li>
+            Global Database Total System Logs:
+            <strong id="total-rows">0</strong>
+          </li>
+        </ul>
+        <a href="/results" class="btn btn-success"
+          >Execute Neural Analysis Systems</a
+        >
+      </div>
+    </main>
+
+    {% if run_analysis %}
+    <div class="analytics-grid">
+      {% for key, val in data.means.items() %}
+      <div class="metric-panel">
+        <div class="panel-header">
+          <h3>Averaged {{ key | upper }}</h3>
+          <span class="value-display"
+            >{{ val | round(2) }}<span class="unit"
+              >{{ standards[key]['unit'] if key in standards else '' }}</span
+            ></span
+          >
+        </div>
+        <div class="medical-bounds">
+          Ideal Range: {{ standards[key]['min_ideal'] if key in standards else
+          '0' }} - {{ standards[key]['max_ideal'] if key in standards else '100'
+          }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="calculated-grid">
+      <div class="metric-panel" style="grid-column: 1 / -1">
+        <div
+          class="panel-header"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <h3>Global Predicted Environment State Matrix</h3>
+          <span
+            class="status-badge"
+            style="background-color: var(--state-color, #34c759); --state-color: {{ data.badge_color }}; color: #000000; padding: 6px 14px; font-size: 1rem;"
+            >{{ data.state_str }}</span
+          >
+        </div>
+        <div style="margin-top: 15px">
+          <h4
+            style="
+              color: var(--text-main);
+              font-weight: 500;
+              margin-bottom: 6px;
+            "
+          >
+            Dynamic Clinical Prognosis:
+          </h4>
+          <p
+            style="
+              color: var(--text-sub);
+              line-height: 1.5;
+              font-size: 0.9rem;
+              margin: 0;
+            "
+          >
+            {{ data.prognosis[0] }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-box">
+      <h3>Ecosystem Waveform Stream & Analytical Core Horizon Curves</h3>
+      <div class="wide-image-container">
+        <img
+          src="/static/charts/trend_waveform.png?v={{ range(1, 9999) | random }}"
+          alt="Waveform Performance Distribution Curves"
+          style="
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+          "
+        />
+      </div>
+    </div>
+
+    <h3>Analytical Core Cognitive Indices Subpages</h3>
+    <div class="index-button-matrix">
+      {% for id, obj in data.indices.items() %}
+      <a
+        href="/score/{{ id }}"
+        class="index-card-btn"
+        style="border-left-color: var(--idx-color, #ffffff); --idx-color: {{ obj.color }};"
+      >
+        <span class="idx-title">{{ obj.name }}</span>
+        <span
+          class="idx-val"
+          style="color: var(--idx-color, #ffffff); --idx-color: {{ obj.color }};"
+          >{{ obj.score }}%</span
+        >
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>
