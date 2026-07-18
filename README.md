@@ -166,9 +166,17 @@ Lmax = 1000 Lux
 ```
 0.35
 ```
+---
+### Cognitive Environment Mapping Framework Dashboard
+<img width="1904" height="856" alt="Screenshot (4802)" src="https://github.com/user-attachments/assets/49e17080-b54c-4eeb-948b-71edf1e6100c" />
 
 ---
 ### Real-Time Device Telemetry Multi-Stream Data Curve
+<img width="2379" height="766" alt="trend_waveform" src="https://github.com/user-attachments/assets/8cad6063-bd35-4350-80fb-5329250aac60" />
+
+### Analytical Core Cognitive Indices Subpages
+<img width="1903" height="489" alt="Screenshot (4803)" src="https://github.com/user-attachments/assets/bbb8ea8a-6123-4283-8c2e-12b3b69a9c3e" />
+
 
 ---
 ## 7. Matrix Multiplication in the Classifier Model
