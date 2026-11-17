@@ -1,6 +1,9 @@
 # NeuroSense Cognitive Environment Mapping Framework
 ## IoT Edge Computing Data Ingestion Platform & Artificial Neural Network Environment State Analysis
 
+<img width="1278" height="640" alt="NeuroSense Edge IoT" src="https://github.com/user-attachments/assets/2d80e906-0a68-46a6-a6c8-425f1be231ac" />
+
+
 This project is an integrated, edge-to-cloud **NeuroSense Cognitive Environment Mapping Framework** designed to track ambient atmospheric conditions and analyze their direct impact on human health and cognitive performance. The system features an array of precision hardware sensors managed by an ESP32 microcontroller, all housed within a modular, multi-tier custom enclosure constructed from transparent acrylic sheets, washers, and metallic hex standoffs. Telemetry data is smoothed locally using filtering algorithms, transmitted via a resilient Wi-Fi pipeline, and processed by a specialized Flask backend server running predictive Machine Learning models (ANN Classifier and Future Regression Forecasts) to generate real-time environmental quality indices and responsive boundary tracking dashboards.
 
 ---
