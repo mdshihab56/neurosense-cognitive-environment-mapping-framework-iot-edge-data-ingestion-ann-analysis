@@ -4,6 +4,46 @@
 This project is an integrated, edge-to-cloud **NeuroSense Cognitive Environment Mapping Framework** designed to track ambient atmospheric conditions and analyze their direct impact on human health and cognitive performance. The system features an array of precision hardware sensors managed by an ESP32 microcontroller, all housed within a modular, multi-tier custom enclosure constructed from transparent acrylic sheets, washers, and metallic hex standoffs. Telemetry data is smoothed locally using filtering algorithms, transmitted via a resilient Wi-Fi pipeline, and processed by a specialized Flask backend server running predictive Machine Learning models (ANN Classifier and Future Regression Forecasts) to generate real-time environmental quality indices and responsive boundary tracking dashboards.
 
 ---
+## PCB & Prototype Versions
+### 1. NeuroSense Edge One - Unified PCB Architecture
+### 2. Multi-Tiered NeuroSense Analytics Platform
+---
+
+## 1. NeuroSense Edge One - Unified PCB Architecture
+
+**NeuroSense Edge One** is the redesigned hardware platform of the NeuroSense system, consolidating the previously distributed multi-substrate architecture into a single, compact PCB. The redesign focuses on component integration, power management, signal integrity, and portability, resulting in a more refined and self-contained embedded platform.
+
+### 2. PCB Design & Architecture
+
+The board features a **75 mm × 75 mm, double-layer PCB** with 1 oz copper and dedicated common-ground copper pours across both layers. Carefully maintained clearance gaps, organized routing, and EMI filtering provisions contribute to a clean and reliable board layout.
+
+The unified PCB integrates the following functional sections:
+
+- **Microcontroller:** ESP32 30-pin development module for sensor acquisition, processing, and Wi-Fi connectivity.
+- **Battery Management:** Integrated 1S battery protection circuitry.
+- **Charging Circuit:** TP4056-based single-cell lithium-ion charging circuit.
+- **Power Conversion:** Boost converter for generating a 5V supply from the battery.
+- **Voltage Regulation:** AMS1117-based regulation stages for the required 5V and 3.3V power rails.
+- **Sensor Interfaces:** Dedicated JST connectors for connecting environmental sensors.
+- **Signal & Power Conditioning:** EMI filtering provisions and organized power distribution.
+
+### 3. Modular & Portable Design
+
+Unlike the earlier multi-substrate arrangement, NeuroSense Edge One brings the primary electronics and power-management circuitry together on a single PCB. The battery and external sensors can be positioned independently within the enclosure, allowing greater flexibility in physical arrangement and sensor placement.
+
+This architecture is designed to fit inside a compact enclosure, making the device easier to carry, install, and position in different indoor environments.
+
+With integrated Wi-Fi connectivity, the platform operates as a portable environmental data acquisition unit while maintaining a streamlined hardware configuration.
+
+### 4. Design Philosophy
+
+The redesign represents a move towards a more integrated, maintainable, and reproducible hardware platform. By consolidating the essential electronics onto one PCB, NeuroSense Edge One reduces the complexity of physical assembly and provides a cleaner foundation for future development.
+
+**One board. Integrated electronics. Portable environmental intelligence.**
+
+---
+## 2. Multi-Tiered NeuroSense Analytics Platform
+---
 
 ## 1. Structural Architecture of Multi-Tiered NeuroSense Analytics Platform
 
@@ -41,8 +81,10 @@ The structural foundation utilizes precision-machined, high-optical-clarity **3 
 
 
 ---
+# Processing & ML Operation
+---
 
-## 3. Signal Processing and Filtering
+## 1. Signal Processing and Filtering
 
 Raw analog readings from the MQ-135 and sound sensors often jump around due to minor environmental shifts or electrical noise. The firmware cleans this up using an Exponential Moving Average (EMA) filter:
 
@@ -69,7 +111,7 @@ This improves ambient sound estimation by ignoring brief quiet intervals.
 
 ---
 
-## 4. CSV Packet Generation and HTTP Transmission Core
+## 2. CSV Packet Generation and HTTP Transmission Core
 
 Once the upload timer triggers, the ESP32 gathers the filtered environmental averages and packages them into a standardized comma-separated text packet.
 
@@ -77,7 +119,7 @@ The firmware establishes a Wi-Fi connection using the WiFi Client library and up
 
 ---
 
-## 5. System Folder Architecture
+## 3. System Folder Architecture
 
 When deploying this project, the workspace directory must follow the structure below. This organization allows Flask to correctly locate templates, generated charts, machine learning models, and static assets.
 
@@ -114,7 +156,7 @@ Ns-cemf/
 <img width="1920" height="341" alt="Screenshot (48201)" src="https://github.com/user-attachments/assets/58d99eaf-bac7-4741-920f-f696f0205e6e" />
 
 ---
-## 6. Data Scaling and Normalization
+## 4. Data Scaling and Normalization
 
 All sensor inputs are normalized using Min-Max Scaling.
 
@@ -179,7 +221,7 @@ Lmax = 1000 Lux
 
 
 ---
-## 7. Matrix Multiplication in the Classifier Model
+## 5. Matrix Multiplication in the Classifier Model
 
 The backend contains a trained Artificial Neural Network stored inside
 
@@ -191,7 +233,7 @@ The network uses weight matrices **W** and bias vectors **b** for inference.
 
 ---
 
-## 8. Hidden Layer Processing
+## 6. Hidden Layer Processing
 
 The normalized feature vector passes through the first hidden layer.
 
@@ -229,7 +271,7 @@ a_{1,0}=max(0,z_{1,0})
 a_{1,1}=max(0,z_{1,1})
 ```
 
-## 9. Output Layer Processing
+## 7. Output Layer Processing
 
 The filtered hidden layer outputs are multiplied by the second layer's weight matrix and adjusted by the output bias.
 
@@ -255,7 +297,7 @@ The sigmoid compresses the ANN prediction into a normalized value between **0** 
 
 ---
 
-## 10. Regression Analysis and Time-Series Environmental Decay Math
+## 8. Regression Analysis and Time-Series Environmental Decay Math
 <img width="2379" height="805" alt="trend_waveforhm" src="https://github.com/user-attachments/assets/fea1c8d9-988e-463b-80a7-0506251651f8" />
 
 The framework incorporates a regression forecasting engine (`regression_model.pkl`) that predicts how current environmental conditions may influence human health over the next **24 hours**.
@@ -287,7 +329,7 @@ These projected values are passed into the regression model to visualize environ
 
 ---
 
-## 11. Comprehensive Environmental & Biometric Index Calculations
+## 9. Comprehensive Environmental & Biometric Index Calculations
 
 Beyond the ANN and Regression models, the backend computes multiple environmental quality indices.
 
@@ -438,7 +480,7 @@ Sound Risk
 
 ---
 
-## 12. Generating Dashboard Visuals with Matplotlib
+## 10. Generating Dashboard Visuals with Matplotlib
 
 The backend automatically generates visual analytics after every uploaded dataset.
 
@@ -471,7 +513,7 @@ Generated graphs include
 
 ---
 
-## 13. The Human Impact: How This System Benefits Daily Life
+## 11. The Human Impact: How This System Benefits Daily Life
 
 NeuroSense aims to improve indoor environmental awareness by providing meaningful interpretation of sensor data rather than simply displaying raw measurements.
 
