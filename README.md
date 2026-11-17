@@ -13,6 +13,10 @@ This project is an integrated, edge-to-cloud **NeuroSense Cognitive Environment 
 
 **NeuroSense Edge One** is the redesigned hardware platform of the NeuroSense system, consolidating the previously distributed multi-substrate architecture into a single, compact PCB. The redesign focuses on component integration, power management, signal integrity, and portability, resulting in a more refined and self-contained embedded platform.
 
+<img width="1754" height="1240" alt="NeuroSense Edge One - Unified PCB Architecture" src="https://github.com/user-attachments/assets/f51b2a88-1224-4976-a486-2a31dd34700e" />
+
+
+
 ### 2. PCB Design & Architecture
 
 The board features a **75 mm × 75 mm, double-layer PCB** with 1 oz copper and dedicated common-ground copper pours across both layers. Carefully maintained clearance gaps, organized routing, and EMI filtering provisions contribute to a clean and reliable board layout.
@@ -27,6 +31,9 @@ The unified PCB integrates the following functional sections:
 - **Sensor Interfaces:** Dedicated JST connectors for connecting environmental sensors.
 - **Signal & Power Conditioning:** EMI filtering provisions and organized power distribution.
 
+<img width="1754" height="1240" alt="NeuroSense Edge One - Unified PCB Architecture-3" src="https://github.com/user-attachments/assets/f6b8f169-1db3-4823-8613-9523dba309b9" />
+
+
 ### 3. Modular & Portable Design
 
 Unlike the earlier multi-substrate arrangement, NeuroSense Edge One brings the primary electronics and power-management circuitry together on a single PCB. The battery and external sensors can be positioned independently within the enclosure, allowing greater flexibility in physical arrangement and sensor placement.
@@ -34,6 +41,9 @@ Unlike the earlier multi-substrate arrangement, NeuroSense Edge One brings the p
 This architecture is designed to fit inside a compact enclosure, making the device easier to carry, install, and position in different indoor environments.
 
 With integrated Wi-Fi connectivity, the platform operates as a portable environmental data acquisition unit while maintaining a streamlined hardware configuration.
+
+<img width="1754" height="1240" alt="NeuroSense Edge One - Unified PCB Architecture-2" src="https://github.com/user-attachments/assets/c10e883e-ed17-4b36-a25a-5293d448b268" />
+
 
 ### 4. Design Philosophy
 
